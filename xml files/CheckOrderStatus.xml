@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+	<listener class-name="Listener.MyTestResult"/>
+</listeners>
+	<test name="Open Backend">
+		<classes>
+			<class name="Backend_Testcases.Backend_Login"/>
+		</classes>
+	</test>
+
+	<test name="Check Order Status">
+		<classes>
+			<class name="Backend_Testcases.CheckOrderStatus">
+				<methods>
+					<include name="checkOrderStatusFromGrid"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 
